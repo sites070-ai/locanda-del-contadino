@@ -4,132 +4,273 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locanda del Contadino – Pizzeria e Ristorante a Cremona dal 2005</title>
-    <meta name="description" content="Locanda del Contadino è una pizzeria e ristorante attiva a Cremona dal 2005. Impasti preparati ogni giorno, pizze classiche e speciali, menu pranzo e servizio delivery.">
+    <meta name="description" content="Locanda del Contadino è una pizzeria e ristorante attiva a Cremona dal 2005. Pizze fatte bene, impasti curati, menu pranzo e servizio costante.">
+    <style>
+        :root {
+            --black: #000000;
+            --yellow: #ffcc00;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .section {
+            padding: 3rem 1.5rem;
+        }
+
+        .section--dark {
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+        .section--yellow {
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            letter-spacing: 0.03em;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .list li {
+            margin-bottom: 0.4rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.6rem;
+            border-radius: 999px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn--yellow {
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+
+        .btn--outline-yellow {
+            background-color: transparent;
+            color: var(--yellow);
+            border-color: var(--yellow);
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            padding: 1.5rem;
+            background-color: #111111;
+        }
+
+        footer a {
+            margin: 0 0.5rem;
+            color: var(--yellow);
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Locanda del Contadino – Pizzeria e Ristorante a Cremona dal 2005</h1>
-</header>
+    <!-- HERO / INTRO -->
+    <section class="section section--dark">
+        <div class="container">
+            <h1>Locanda del Contadino – Pizzeria e Ristorante a Cremona dal 2005</h1>
+            <p>La Locanda del Contadino è una pizzeria e ristorante attiva a Cremona dal 2005. Da allora lavoriamo con continuità, mantenendo lo stesso approccio: impasti preparati ogni giorno, ricette stabili e una cucina che punta alla costanza più che agli effetti speciali. Chi viene da noi sa cosa trova e perché torna.</p>
 
-<section>
-    <p>La Locanda del Contadino è una pizzeria e ristorante attiva a Cremona dal 2005. Da allora lavoriamo con continuità, mantenendo lo stesso approccio: impasti preparati ogni giorno, ricette stabili e una cucina che punta alla costanza più che agli effetti speciali. Chi viene da noi sa cosa trova e perché torna.</p>
-</section>
+            <div class="btn-group">
+                <a href="pizza-delivery-cremona.html" class="btn btn--yellow">Pizza Delivery Cremona</a>
+                <a href="menu-pizzeria.html" class="btn btn--outline-yellow">Guarda il Menu Pizzeria</a>
+            </div>
+        </div>
+    </section>
 
-<hr>
+    <!-- CHI SIAMO / COME LAVORIAMO -->
+    <section class="section section--yellow">
+        <div class="container">
+            <h2>Chi siamo e come lavoriamo</h2>
+            <p>Alla Locanda del Contadino non cambiamo direzione ogni sei mesi: seguiamo lo stesso metodo di lavoro dal 2005, migliorando quello che serve e mantenendo ciò che funziona. Gli impasti vengono preparati quotidianamente con tempi e procedure che conosciamo bene. Gli ingredienti che utilizziamo sono quelli che negli anni hanno dimostrato affidabilità in cottura e nel delivery. Questo ci permette di offrire un risultato il più possibile costante, sia in sala che a domicilio.</p>
+        </div>
+    </section>
 
-<section>
-    <h2>Chi siamo e come lavoriamo</h2>
-    <p>Alla Locanda del Contadino non cambiamo direzione ogni sei mesi: seguiamo lo stesso metodo di lavoro dal 2005, migliorando quello che serve e mantenendo ciò che funziona. Gli impasti vengono preparati quotidianamente con tempi e procedure che conosciamo bene. Gli ingredienti che utilizziamo sono quelli che negli anni hanno dimostrato affidabilità in cottura e nel delivery. Questo ci permette di offrire un risultato il più possibile costante, sia in sala che a domicilio.</p>
-</section>
+    <!-- PERCHÉ TORNANO / PUNTI CHIAVE -->
+    <section class="section section--dark">
+        <div class="container">
+            <h2>Perché molti clienti tornano da noi</h2>
+            <ul class="list">
+                <li>lavoriamo con continuità dal 2005</li>
+                <li>manteniamo ricette e standard stabili</li>
+                <li>rispettiamo procedure chiare per la sicurezza alimentare</li>
+                <li>gestiamo impasti, cotture e tempi con attenzione</li>
+                <li>diamo informazioni corrette su allergeni e ingredienti</li>
+                <li>ascoltiamo i feedback e correggiamo quando serve</li>
+            </ul>
+        </div>
+    </section>
 
-<hr>
+    <!-- LE NOSTRE PIZZE -->
+    <section class="section section--yellow">
+        <div class="container">
+            <h2>Le nostre pizze</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Pizze Classiche</h3>
+                    <p>Le ricette più conosciute, con combinazioni semplici e collaudate.</p>
+                    <a href="pizze-classiche.html" class="btn btn--yellow">Vai alle Pizze Classiche</a>
+                </div>
+                <div>
+                    <h3>Pizze Speciali / Gourmet</h3>
+                    <p>Proposte diverse per chi vuole uscire dai soliti gusti, sempre con attenzione all’impasto e alla resa in cottura.</p>
+                    <a href="pizze-speciali-gourmet.html" class="btn btn--yellow">Vai alle Pizze Speciali</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-    <h2>Perché molti clienti tornano da noi</h2>
-    <ul>
-        <li>lavoriamo con continuità dal 2005</li>
-        <li>manteniamo ricette e standard stabili</li>
-        <li>rispettiamo procedure chiare per la sicurezza alimentare</li>
-        <li>gestiamo impasti, cotture e tempi con attenzione</li>
-        <li>diamo informazioni corrette su allergeni e ingredienti</li>
-        <li>ascoltiamo i feedback e correggiamo quando serve</li>
-    </ul>
-</section>
+    <!-- MENU PIZZERIA / MENU PRANZO -->
+    <section class="section section--dark">
+        <div class="container">
+            <h2>Menu Pizzeria e Menu Pranzo</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Menu Pizzeria</h3>
+                    <p>Tutte le pizze, gli impasti disponibili e le varianti, presentati in modo chiaro.</p>
+                    <a href="menu-pizzeria.html" class="btn btn--yellow">Apri il Menu Pizzeria</a>
+                </div>
+                <div>
+                    <h3>Menu Pranzo</h3>
+                    <p>Piatti pensati per chi lavora o ha poco tempo, con proposte definite e prezzi chiari.</p>
+                    <a href="menu-pranzo.html" class="btn btn--outline-yellow">Apri il Menu Pranzo</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<hr>
+    <!-- SICUREZZA / ALLERGENI -->
+    <section class="section section--yellow">
+        <div class="container">
+            <h2>Sicurezza alimentare, allergeni e procedure</h2>
+            <p>Gestire un ristorante e una pizzeria significa anche rispettare le norme HACCP, tenere sotto controllo le procedure e dare informazioni corrette su allergeni e ingredienti. Su questo non si improvvisa.</p>
+            <div class="btn-group">
+                <a href="sicurezza-alimentare-haccp.html" class="btn btn--black">Sicurezza Alimentare</a>
+                <a href="allergeni-intolleranze.html" class="btn btn--black">Allergeni e Intolleranze</a>
+                <a href="impasti-speciali-lievitazione.html" class="btn btn--black">Impasti e Lievitazione</a>
+            </div>
+        </div>
+    </section>
 
-<section>
-    <h2>Le nostre pizze</h2>
+    <!-- DOVE SIAMO / CHI SIAMO / FAQ -->
+    <section class="section section--dark">
+        <div class="container">
+            <div class="grid grid-2">
+                <div>
+                    <h2>Dove siamo e come contattarci</h2>
+                    <p>Siamo a Cremona, in una zona facilmente raggiungibile. Nella pagina contatti trovi indirizzo, orari, telefono e mappa.</p>
+                    <a href="contatti-come-arrivare.html" class="btn btn--yellow">Contatti e Mappa</a>
+                </div>
+                <div>
+                    <h2>Chi c’è dietro la Locanda</h2>
+                    <p>Dietro il locale ci sono persone che lavorano nella ristorazione da anni. Nella pagina dedicata raccontiamo come è nato il locale, come si è evoluto e quali scelte abbiamo fatto nel tempo.</p>
+                    <a href="chi-siamo.html" class="btn btn--outline-yellow">Scopri Chi Siamo</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h3>Pizze Classiche</h3>
-    <p>Le ricette più conosciute, con combinazioni semplici e collaudate.</p>
-    <a href="pizze-classiche.html">Vai alle Pizze Classiche</a>
+    <!-- FAQ -->
+    <section class="section section--yellow">
+        <div class="container">
+            <h2>Domande frequenti</h2>
+            <p>Molte domande si ripetono: consegna, intolleranze, modifiche agli ingredienti, prenotazioni, orari. Le abbiamo raccolte nella pagina FAQ.</p>
+            <a href="faq.html" class="btn btn--black">Vai alle FAQ</a>
+        </div>
+    </section>
 
-    <h3>Pizze Speciali / Gourmet</h3>
-    <p>Proposte diverse per chi vuole uscire dai soliti gusti.</p>
-    <a href="pizze-speciali-gourmet.html">Vai alle Pizze Speciali</a>
-
-    <h3>Pizze Bianche</h3>
-    <p>Senza pomodoro, più delicate, sempre con la stessa attenzione all’impasto.</p>
-    <a href="pizze-bianche.html">Vai alle Pizze Bianche</a>
-</section>
-
-<hr>
-
-<section>
-    <h2>Menu Pizzeria e Menu Pranzo</h2>
-
-    <h3>Menu Pizzeria</h3>
-    <p>Tutte le pizze, gli impasti disponibili e le varianti.</p>
-    <a href="menu-pizzeria.html">Apri il Menu Pizzeria</a>
-
-    <h3>Menu Pranzo</h3>
-    <p>Piatti pensati per chi lavora o ha poco tempo, con proposte chiare e prezzi definiti.</p>
-    <a href="menu-pranzo.html">Apri il Menu Pranzo</a>
-</section>
-
-<hr>
-
-<section>
-    <h2>Pizza Delivery a Cremona</h2>
-    <p>Facciamo consegna a domicilio a Cremona. Le pizze escono dal forno poco prima della consegna e organizziamo i giri in modo sensato. Se c’è ritardo, lo comunichiamo: preferiamo essere chiari.</p>
-    <a href="pizza-delivery-cremona.html">Informazioni sul Delivery</a>
-</section>
-
-<hr>
-
-<section>
-    <h2>Recensioni e presenza su Google</h2>
-    <p>Le recensioni sono reali e rappresentano il risultato del lavoro quotidiano. Nella pagina dedicata trovi una selezione e il link diretto alla nostra scheda Google.</p>
-    <a href="recensioni-google-maps.html">Leggi le Recensioni</a>
-</section>
-
-<hr>
-
-<section>
-    <h2>Sicurezza alimentare, allergeni e procedure</h2>
-    <p>Rispettiamo le norme HACCP, teniamo sotto controllo le procedure e forniamo informazioni corrette su allergeni e ingredienti. Su questo non si improvvisa.</p>
-
-    <a href="sicurezza-alimentare-haccp.html">Sicurezza Alimentare</a><br>
-    <a href="allergeni-intolleranze.html">Allergeni e Intolleranze</a><br>
-    <a href="impasti-speciali-lievitazione.html">Impasti Speciali</a>
-</section>
-
-<hr>
-
-<section>
-    <h2>Dove siamo e come contattarci</h2>
-    <p>Siamo a Cremona, in una zona facilmente raggiungibile. Nella pagina contatti trovi indirizzo, orari, telefono e mappa.</p>
-    <a href="contatti-come-arrivare.html">Contatti e Mappa</a>
-</section>
-
-<hr>
-
-<section>
-    <h2>Chi c’è dietro la Locanda del Contadino</h2>
-    <p>Dietro il locale ci sono persone che lavorano nella ristorazione da anni. Nella pagina dedicata raccontiamo come è nato il locale, come si è evoluto e quali scelte abbiamo fatto nel tempo.</p>
-    <a href="chi-siamo.html">Chi Siamo</a>
-</section>
-
-<hr>
-
-<section>
-    <h2>Domande frequenti</h2>
-    <p>Molte domande si ripetono: consegna, intolleranze, modifiche agli ingredienti, prenotazioni, orari. Le abbiamo raccolte nella pagina FAQ.</p>
-    <a href="faq.html">Vai alle FAQ</a>
-</section>
-
-<hr>
-
-<footer>
-    <p>
-        <a href="pizzeria-a-cremona.html">Pizzeria a Cremona</a> |
-        <a href="pizzeria-vicino-a-me.html">Pizzeria vicino a me</a> |
-        <a href="privacy-cookie-info-legali.html">Privacy e Note Legali</a>
-    </p>
-</footer>
+    <footer>
+        <p>
+            <a href="pizzeria-a-cremona.html">Pizzeria a Cremona</a> |
+            <a href="pizzeria-vicino-a-me.html">Pizzeria vicino a me</a> |
+            <a href="privacy-cookie-info-legali.html">Privacy e Note Legali</a>
+        </p>
+    </footer>
 
 </body>
 </html>
