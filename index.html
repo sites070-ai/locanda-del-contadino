@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locanda del Contadino – Pizzeria e Ristorante a Cremona dal 2005</title>
-    <meta name="description" content="Locanda del Contadino è una pizzeria e ristorante attiva a Cremona dal 2005. Pizze fatte bene, impasti curati, menu pranzo e servizio costante.">
+    <meta name="description" content="Pizzeria e ristorante a Cremona dal 2005. Impasti preparati ogni giorno, ricette stabili, sicurezza alimentare e servizio costante.">
     <style>
         :root {
             --black: #000000;
@@ -12,11 +12,7 @@
             --white: #ffffff;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -25,242 +21,201 @@
             line-height: 1.6;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        a { text-decoration: none; color: inherit; }
 
-        .section {
-            padding: 3rem 1.5rem;
-        }
+        .section { padding: 4rem 1.5rem; }
+        .dark { background: var(--black); color: var(--white); }
+        .yellow { background: var(--yellow); color: var(--black); }
 
-        .section--dark {
-            background-color: var(--black);
-            color: var(--white);
-        }
+        .container { max-width: 1100px; margin: 0 auto; }
 
-        .section--yellow {
-            background-color: var(--yellow);
-            color: var(--black);
-        }
+        h1 { font-size: 2.4rem; margin-bottom: 1rem; text-transform: uppercase; }
+        h2 { font-size: 1.8rem; margin-bottom: 1rem; text-transform: uppercase; }
+        h3 { font-size: 1.2rem; margin-bottom: 0.5rem; text-transform: uppercase; }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        h1, h2, h3 {
-            margin-bottom: 1rem;
-            letter-spacing: 0.03em;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            text-transform: uppercase;
-        }
-
-        h2 {
-            font-size: 1.6rem;
-            text-transform: uppercase;
-        }
-
-        h3 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        .grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .grid-2 {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .list li {
-            margin-bottom: 0.4rem;
-        }
+        p { margin-bottom: 1rem; }
 
         .btn {
             display: inline-block;
-            padding: 0.8rem 1.6rem;
+            padding: 0.9rem 1.8rem;
             border-radius: 999px;
             font-weight: 600;
             text-transform: uppercase;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             border: 2px solid transparent;
             cursor: pointer;
         }
 
-        .btn--yellow {
-            background-color: var(--yellow);
-            color: var(--black);
+        .btn-yellow { background: var(--yellow); color: var(--black); }
+        .btn-outline-yellow { background: transparent; color: var(--yellow); border-color: var(--yellow); }
+        .btn-black { background: var(--black); color: var(--yellow); border-color: var(--black); }
+
+        .btn-group { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+
+        .hero-image {
+            width: 100%;
+            height: 280px;
+            background-image: url('https://images.unsplash.com/photo-1601924582975-7e1f1a7f1e8f');
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            margin-top: 2rem;
         }
 
-        .btn--outline-yellow {
-            background-color: transparent;
-            color: var(--yellow);
-            border-color: var(--yellow);
-        }
+        .grid { display: grid; gap: 2rem; }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
 
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
+        .icon-list { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+        .icon-item { text-align: left; }
+        .icon { font-size: 2rem; margin-bottom: 0.5rem; }
 
         footer {
             text-align: center;
-            font-size: 0.85rem;
-            padding: 1.5rem;
-            background-color: #111111;
+            padding: 2rem;
+            background: #111;
+            color: var(--yellow);
+            font-size: 0.9rem;
         }
 
-        footer a {
-            margin: 0 0.5rem;
-            color: var(--yellow);
-        }
+        footer a { margin: 0 0.5rem; color: var(--yellow); }
 
         @media (max-width: 768px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h2 {
-                font-size: 1.4rem;
-            }
+            h1 { font-size: 1.9rem; }
+            h2 { font-size: 1.5rem; }
+            .grid-2 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- HERO / INTRO -->
-    <section class="section section--dark">
+    <!-- HERO -->
+    <section class="section dark">
         <div class="container">
             <h1>Locanda del Contadino – Pizzeria e Ristorante a Cremona dal 2005</h1>
-            <p>La Locanda del Contadino è una pizzeria e ristorante attiva a Cremona dal 2005. Da allora lavoriamo con continuità, mantenendo lo stesso approccio: impasti preparati ogni giorno, ricette stabili e una cucina che punta alla costanza più che agli effetti speciali. Chi viene da noi sa cosa trova e perché torna.</p>
+            <p>Dal 2005 lavoriamo con continuità, seguendo lo stesso metodo: impasti preparati ogni giorno, ricette stabili e una cucina che punta alla costanza più che agli effetti speciali. Chi viene da noi sa cosa trova e perché torna.</p>
 
             <div class="btn-group">
-                <a href="pizza-delivery-cremona.html" class="btn btn--yellow">Pizza Delivery Cremona</a>
-                <a href="menu-pizzeria.html" class="btn btn--outline-yellow">Guarda il Menu Pizzeria</a>
+                <a href="pizza-delivery-cremona.html" class="btn btn-yellow">Pizza Delivery Cremona</a>
+                <a href="menu-pizzeria.html" class="btn btn-outline-yellow">Menu Pizzeria</a>
             </div>
+
+            <div class="hero-image"></div>
         </div>
     </section>
 
-    <!-- CHI SIAMO / COME LAVORIAMO -->
-    <section class="section section--yellow">
+    <!-- CHI SIAMO -->
+    <section class="section yellow">
         <div class="container">
             <h2>Chi siamo e come lavoriamo</h2>
-            <p>Alla Locanda del Contadino non cambiamo direzione ogni sei mesi: seguiamo lo stesso metodo di lavoro dal 2005, migliorando quello che serve e mantenendo ciò che funziona. Gli impasti vengono preparati quotidianamente con tempi e procedure che conosciamo bene. Gli ingredienti che utilizziamo sono quelli che negli anni hanno dimostrato affidabilità in cottura e nel delivery. Questo ci permette di offrire un risultato il più possibile costante, sia in sala che a domicilio.</p>
+            <p>Non cambiamo direzione ogni sei mesi. Seguiamo lo stesso metodo dal 2005, migliorando ciò che serve e mantenendo ciò che funziona. Gli impasti vengono preparati quotidianamente con tempi e procedure che conosciamo bene. Gli ingredienti sono quelli che negli anni hanno dimostrato affidabilità in cottura e nel delivery.</p>
         </div>
     </section>
 
-    <!-- PERCHÉ TORNANO / PUNTI CHIAVE -->
-    <section class="section section--dark">
+    <!-- PERCHÉ TORNANO -->
+    <section class="section dark">
         <div class="container">
             <h2>Perché molti clienti tornano da noi</h2>
-            <ul class="list">
-                <li>lavoriamo con continuità dal 2005</li>
-                <li>manteniamo ricette e standard stabili</li>
-                <li>rispettiamo procedure chiare per la sicurezza alimentare</li>
-                <li>gestiamo impasti, cotture e tempi con attenzione</li>
-                <li>diamo informazioni corrette su allergeni e ingredienti</li>
-                <li>ascoltiamo i feedback e correggiamo quando serve</li>
-            </ul>
+
+            <div class="icon-list">
+                <div class="icon-item">
+                    <div class="icon">✓</div>
+                    <p>Continuità dal 2005</p>
+                </div>
+                <div class="icon-item">
+                    <div class="icon">🔥</div>
+                    <p>Impasti preparati ogni giorno</p>
+                </div>
+                <div class="icon-item">
+                    <div class="icon">📋</div>
+                    <p>Procedure chiare e rispettate</p>
+                </div>
+                <div class="icon-item">
+                    <div class="icon">🍕</div>
+                    <p>Ricette stabili e collaudate</p>
+                </div>
+                <div class="icon-item">
+                    <div class="icon">ℹ️</div>
+                    <p>Informazioni corrette su allergeni</p>
+                </div>
+                <div class="icon-item">
+                    <div class="icon">🔧</div>
+                    <p>Correzioni quando servono</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- LE NOSTRE PIZZE -->
-    <section class="section section--yellow">
+    <section class="section yellow">
         <div class="container">
             <h2>Le nostre pizze</h2>
+
             <div class="grid grid-2">
                 <div>
                     <h3>Pizze Classiche</h3>
                     <p>Le ricette più conosciute, con combinazioni semplici e collaudate.</p>
-                    <a href="pizze-classiche.html" class="btn btn--yellow">Vai alle Pizze Classiche</a>
+                    <a href="pizze-classiche.html" class="btn btn-black">Vai alle Classiche</a>
                 </div>
+
                 <div>
                     <h3>Pizze Speciali / Gourmet</h3>
-                    <p>Proposte diverse per chi vuole uscire dai soliti gusti, sempre con attenzione all’impasto e alla resa in cottura.</p>
-                    <a href="pizze-speciali-gourmet.html" class="btn btn--yellow">Vai alle Pizze Speciali</a>
+                    <p>Proposte diverse per chi vuole uscire dai soliti gusti, sempre con attenzione all’impasto.</p>
+                    <a href="pizze-speciali-gourmet.html" class="btn btn-black">Vai alle Speciali</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MENU PIZZERIA / MENU PRANZO -->
-    <section class="section section--dark">
+    <!-- MENU -->
+    <section class="section dark">
         <div class="container">
             <h2>Menu Pizzeria e Menu Pranzo</h2>
+
             <div class="grid grid-2">
                 <div>
                     <h3>Menu Pizzeria</h3>
-                    <p>Tutte le pizze, gli impasti disponibili e le varianti, presentati in modo chiaro.</p>
-                    <a href="menu-pizzeria.html" class="btn btn--yellow">Apri il Menu Pizzeria</a>
+                    <p>Tutte le pizze, gli impasti disponibili e le varianti.</p>
+                    <a href="menu-pizzeria.html" class="btn btn-yellow">Apri il Menu</a>
                 </div>
+
                 <div>
                     <h3>Menu Pranzo</h3>
-                    <p>Piatti pensati per chi lavora o ha poco tempo, con proposte definite e prezzi chiari.</p>
-                    <a href="menu-pranzo.html" class="btn btn--outline-yellow">Apri il Menu Pranzo</a>
+                    <p>Piatti pensati per chi lavora o ha poco tempo, con proposte chiare e prezzi definiti.</p>
+                    <a href="menu-pranzo.html" class="btn btn-outline-yellow">Menu Pranzo</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SICUREZZA / ALLERGENI -->
-    <section class="section section--yellow">
+    <!-- SICUREZZA -->
+    <section class="section yellow">
         <div class="container">
-            <h2>Sicurezza alimentare, allergeni e procedure</h2>
-            <p>Gestire un ristorante e una pizzeria significa anche rispettare le norme HACCP, tenere sotto controllo le procedure e dare informazioni corrette su allergeni e ingredienti. Su questo non si improvvisa.</p>
+            <h2>Sicurezza alimentare e allergeni</h2>
+            <p>Rispettiamo le norme HACCP, teniamo sotto controllo le procedure e forniamo informazioni corrette su allergeni e ingredienti.</p>
+
             <div class="btn-group">
-                <a href="sicurezza-alimentare-haccp.html" class="btn btn--black">Sicurezza Alimentare</a>
-                <a href="allergeni-intolleranze.html" class="btn btn--black">Allergeni e Intolleranze</a>
-                <a href="impasti-speciali-lievitazione.html" class="btn btn--black">Impasti e Lievitazione</a>
+                <a href="sicurezza-alimentare-haccp.html" class="btn btn-black">Sicurezza</a>
+                <a href="allergeni-intolleranze.html" class="btn btn-black">Allergeni</a>
+                <a href="impasti-speciali-lievitazione.html" class="btn btn-black">Impasti</a>
             </div>
         </div>
     </section>
 
-    <!-- DOVE SIAMO / CHI SIAMO / FAQ -->
-    <section class="section section--dark">
-        <div class="container">
-            <div class="grid grid-2">
-                <div>
-                    <h2>Dove siamo e come contattarci</h2>
-                    <p>Siamo a Cremona, in una zona facilmente raggiungibile. Nella pagina contatti trovi indirizzo, orari, telefono e mappa.</p>
-                    <a href="contatti-come-arrivare.html" class="btn btn--yellow">Contatti e Mappa</a>
-                </div>
-                <div>
-                    <h2>Chi c’è dietro la Locanda</h2>
-                    <p>Dietro il locale ci sono persone che lavorano nella ristorazione da anni. Nella pagina dedicata raccontiamo come è nato il locale, come si è evoluto e quali scelte abbiamo fatto nel tempo.</p>
-                    <a href="chi-siamo.html" class="btn btn--outline-yellow">Scopri Chi Siamo</a>
-                </div>
+    <!-- CONTATTI -->
+    <section class="section dark">
+        <div class="container grid grid-2">
+            <div>
+                <h2>Dove siamo</h2>
+                <p>Siamo a Cremona, in una zona facilmente raggiungibile. Nella pagina contatti trovi indirizzo, orari, telefono e mappa.</p>
+                <a href="contatti-come-arrivare.html" class="btn btn-yellow">Contatti e Mappa</a>
             </div>
-        </div>
-    </section>
 
-    <!-- FAQ -->
-    <section class="section section--yellow">
-        <div class="container">
-            <h2>Domande frequenti</h2>
-            <p>Molte domande si ripetono: consegna, intolleranze, modifiche agli ingredienti, prenotazioni, orari. Le abbiamo raccolte nella pagina FAQ.</p>
-            <a href="faq.html" class="btn btn--black">Vai alle FAQ</a>
+            <div>
+                <h2>Chi c’è dietro la Locanda</h2>
+                <p>Dietro il locale ci sono persone che lavorano nella ristorazione da anni. Raccontiamo come è nato il locale e come si è evoluto.</p>
+                <a href="chi-siamo.html" class="btn btn-outline-yellow">Chi Siamo</a>
+            </div>
         </div>
     </section>
 
