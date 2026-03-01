@@ -150,9 +150,7 @@
             box-shadow: var(--shadow-gold);
         }
 
-        .ingredient-card-img {
-            overflow: hidden;
-        }
+        .ingredient-card-img { overflow: hidden; }
 
         .ingredient-card-img img {
             width: 100%; height: 100%;
@@ -284,6 +282,36 @@
         .content-text p { font-size: 1.05rem; line-height: 1.9; }
         .content-text strong { color: var(--white); }
 
+        /* ══════ FIX: CHECKLIST VISIBILE ══════ */
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+        }
+
+        .checklist li:last-child { border-bottom: none; }
+
+        .check-icon {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 0.15rem;
+            flex-shrink: 0;
+            min-width: 18px;
+            text-align: center;
+        }
+
         /* MAP-STYLE ORIGINS */
         .origins-section {
             background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--amber));
@@ -373,7 +401,7 @@
 
 <body>
 
-    <!-- ═══════════ NAVIGATION ═══════════ -->
+    <!-- NAVIGATION -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Navigazione principale">
         <div class="nav-inner">
             <a href="/" class="nav-logo" aria-label="Home"><div class="logo-icon">🍕</div>Locanda del Contadino</a>
@@ -389,7 +417,7 @@
         </div>
     </nav>
 
-    <!-- ═══════════ HERO ═══════════ -->
+    <!-- HERO -->
     <header class="page-hero">
         <div class="page-hero-bg">
             <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1920&q=80"
@@ -407,7 +435,7 @@
         </div>
     </header>
 
-    <!-- ═══════════ I NOSTRI PILASTRI ═══════════ -->
+    <!-- I NOSTRI PILASTRI -->
     <section class="section" aria-labelledby="pilastri-heading">
         <div class="container">
             <div style="text-align: center; max-width: 650px; margin: 0 auto 4rem;" class="reveal">
@@ -436,7 +464,7 @@
         </div>
     </section>
 
-    <!-- ═══════════ FEATURED: POMODORO ═══════════ -->
+    <!-- FEATURED: POMODORO -->
     <section class="section" style="background: var(--dark-2);" aria-labelledby="pomodoro-heading">
         <div class="container">
             <span class="section-label">⭐ Il Re degli Ingredienti</span>
@@ -457,7 +485,7 @@
         </div>
     </section>
 
-    <!-- ═══════════ TUTTI GLI INGREDIENTI ═══════════ -->
+    <!-- TUTTI GLI INGREDIENTI -->
     <section class="section" aria-labelledby="tutti-heading">
         <div class="container">
             <div class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
@@ -566,7 +594,7 @@
         </div>
     </section>
 
-    <!-- ═══════════ MAPPA ORIGINI ═══════════ -->
+    <!-- MAPPA ORIGINI -->
     <section class="section" style="padding-top: 2rem;">
         <div class="container">
             <div class="origins-section reveal">
@@ -612,7 +640,9 @@
         </div>
     </section>
 
-    <!-- ═══════════ TRASPARENZA ═══════════ -->
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- FIX: SEZIONE TRASPARENZA CON CHECKLIST VISIBILE -->
+    <!-- ══════════════════════════════════════════════ -->
     <section class="section" style="background: var(--dark-2);" aria-labelledby="trasparenza-heading">
         <div class="container">
             <div class="content-grid reverse reveal">
@@ -620,15 +650,35 @@
                     <span class="section-label">Trasparenza Totale</span>
                     <h2 id="trasparenza-heading">Non nascondiamo niente. Chiedi e rispondiamo.</h2>
                     <p>Crediamo che un ristorante serio non debba aver paura di dire da dove vengono i propri ingredienti. Per questo siamo <strong>completamente trasparenti</strong>:</p>
-                    <p>✓ Ogni ingrediente ha un fornitore tracciabile<br>
-                    ✓ Le etichette sono consultabili su richiesta<br>
-                    ✓ Gli <a href="allergeni-intolleranze.html" style="color: var(--gold);">allergeni</a> sono sempre dichiarati<br>
-                    ✓ Le <a href="sicurezza-alimentare-haccp.html" style="color: var(--gold);">procedure HACCP</a> sono rispettate e documentate<br>
-                    ✓ I prodotti surgelati (quando presenti) sono dichiarati</p>
+
+                    <ul class="checklist">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Ogni ingrediente ha un <strong>fornitore tracciabile</strong> con documentazione archiviata
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Le <strong>etichette</strong> di ogni prodotto sono consultabili su richiesta in sala
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Gli <a href="allergeni-intolleranze.html">allergeni</a> sono sempre dichiarati nel registro e nel menu
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Le <a href="sicurezza-alimentare-haccp.html">procedure HACCP</a> sono rispettate, documentate e verificabili
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            I <strong>prodotti surgelati</strong> (quando presenti) sono sempre dichiarati come da normativa
+                        </li>
+                    </ul>
+
                     <p>Se hai domande su un ingrediente specifico, il nostro personale è formato per risponderti. Non hai bisogno di fidarti ciecamente: <strong>puoi verificare</strong>.</p>
-                    <div class="btn-group">
-                        <a href="allergeni-intolleranze.html" class="btn btn-outline">Allergeni <span class="btn-arrow">→</span></a>
-                        <a href="sicurezza-alimentare-haccp.html" class="btn btn-outline">Sicurezza HACCP <span class="btn-arrow">→</span></a>
+
+                    <div class="btn-group" style="margin-top: 1.5rem;">
+                        <a href="allergeni-intolleranze.html" class="btn btn-outline">🛡️ Allergeni <span class="btn-arrow">→</span></a>
+                        <a href="sicurezza-alimentare-haccp.html" class="btn btn-outline">📋 Sicurezza HACCP <span class="btn-arrow">→</span></a>
                     </div>
                 </div>
                 <div class="content-img">
@@ -640,7 +690,7 @@
         </div>
     </section>
 
-    <!-- ═══════════ SEO TEXT ═══════════ -->
+    <!-- SEO TEXT -->
     <section class="section" aria-labelledby="seo-ingredienti-heading">
         <div class="container">
             <div class="seo-text reveal">
@@ -653,7 +703,7 @@
         </div>
     </section>
 
-    <!-- ═══════════ CTA ═══════════ -->
+    <!-- CTA -->
     <section class="section" style="padding-top: 0;">
         <div class="container">
             <div class="cta-dark reveal">
@@ -667,7 +717,7 @@
         </div>
     </section>
 
-    <!-- ═══════════ FOOTER ═══════════ -->
+    <!-- FOOTER -->
     <footer role="contentinfo">
         <div class="footer-inner">
             <div class="footer-top">
