@@ -204,5 +204,6 @@ nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nl.classList
 const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target)}}),{rootMargin:'0px 0px -80px 0px',threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+<script src="script.js"></script>
 </body>
 </html>

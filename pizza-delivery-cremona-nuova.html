@@ -112,5 +112,6 @@ const nb=document.getElementById('navbar');window.addEventListener('scroll',()=>
 const nt=document.getElementById('navToggle'),nl=document.getElementById('navLinks');nt.addEventListener('click',()=>{nl.classList.toggle('open');const o=nl.classList.contains('open');nt.children[0].style.transform=o?'rotate(45deg) translate(5px,5px)':'';nt.children[1].style.opacity=o?'0':'1';nt.children[2].style.transform=o?'rotate(-45deg) translate(5px,-5px)':''});nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nl.classList.remove('open')}));
 const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target)}}),{rootMargin:'0px 0px -80px 0px',threshold:.1});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+<script src="script.js"></script>
 </body>
 </html>
